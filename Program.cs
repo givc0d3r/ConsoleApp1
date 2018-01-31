@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Math;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,51 +9,48 @@ namespace ConsoleApp1
 {
     class Program
     {
+        /**
+         * Calculadora de IMC
+         * @author D3m0l1d0r <SEU EMAIL AQUI>
+         * @author Cascudo <lucasrochabr@outlook.com>
+         */
         static void Main(string[] args)
         {
-
-            //Calculadora de IMC Feita em CSharp
-            //Aprendendo
-
+            double imc;
+            double peso;
+            double altura;
+            
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.DarkMagenta;
             Console.Clear();
-
-            Console.Title = "Calculadora de IMC By D3m0l1d0r";
             
-
-            string aa1;
-            double peso2;
-            double altura2;
-            
-            Console.WriteLine("Calculadora de IMC By D3m0l1d0r");
+            Console.Title = "Calculadora de IMC By D3m0l1d0r and Cascudo";
+            Console.WriteLine("Calculadora de IMC By D3m0l1d0r and Cascudo");
 
             Console.WriteLine("Seu Peso Atual =>");
-            aa1 = Console.ReadLine();
-            peso2 = int.Parse(aa1);
+            peso = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Sua Altura Atual =>");
-            aa1 = Console.ReadLine();
-            altura2 = double.Parse(aa1);
+            altura = double.Parse(Console.ReadLine());
 
-            
-
-            double imc;
-            imc = peso2 / (altura2 * altura2);
-            Console.WriteLine("Seu IMC é " + imc);
-
+            imc = peso / (Math.Pow(altura, 2));
+            Console.WriteLine("Seu IMC é " + imc.ToString());
             if (imc <= 24.9)
             {
                 Console.WriteLine("Peso Ideal");
             }
-            if (imc >= 24.9 )
+            else if
             {
+                (imc >= 24.9 && imc < 30)
                 Console.WriteLine("Sobrepeso");
             }
-            if (imc >= 30)
+            else
             {
                 Console.WriteLine("Obeso");
             }
+            
+            //Remova os "ifs" acima e descomente a linha abaixo, caso prefira uma versão mais performática:
+            //Console.WriteLine((imc <= 24.9) ? "Peso Ideal" : (imc >= 24.9 && imc < 30) ? "Sobrepeso" : "Obeso");
 
             Console.ReadLine();
 
