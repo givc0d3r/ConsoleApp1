@@ -11,7 +11,7 @@ namespace ConsoleApp1
     {
         /**
          * Calculadora de IMC
-         * @author D3m0l1d0r <SEU EMAIL AQUI>
+         * @author D3m0l1d0r <carlos990192@gmail.com>
          * @author Cascudo <lucasrochabr@outlook.com>
          */
         static void Main(string[] args)
@@ -49,8 +49,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Obeso");
             }
             
-            //Remova os "ifs" acima e descomente a linha abaixo, caso prefira uma versão mais performática:
-            //Console.WriteLine((imc <= 24.9) ? "Peso Ideal" : (imc >= 24.9 && imc < 30) ? "Sobrepeso" : "Obeso");
+            
 
             Console.ReadLine();
 
